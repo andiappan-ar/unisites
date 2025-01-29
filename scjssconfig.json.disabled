@@ -1,9 +1,0 @@
-{
-  "sitecore": {
-    "instancePath": "C:\\inetpub\\wwwroot\\sc104sc.dev.local",
-    "apiKey": "{32B5D5D0-4EFC-427C-8322-139E347B450A}",
-    "deploySecret": "i4lunbpig9ch5efdotifnqz3zv7wwxmkccsbbps4f1m",
-    "deployUrl": "http://unisites.dev.local/sitecore/api/jss/import",
-    "layoutServiceHost": "http://unisites.dev.local/"
-  }
-}
