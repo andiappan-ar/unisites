@@ -1,6 +1,6 @@
-import React from 'react';
+import {React,useContext, useEffect, useState} from 'react';
 import Head from 'next/head';
-import { Placeholder, LayoutServiceData, Field, HTMLLink } from '@sitecore-jss/sitecore-jss-nextjs';
+import { Placeholder, LayoutServiceData, Field, HTMLLink, withSitecoreContext  } from '@sitecore-jss/sitecore-jss-nextjs';
 import config from 'temp/config';
 import Navigation from 'src/Navigation';
 import Scripts from 'src/Scripts';
@@ -20,10 +20,10 @@ interface RouteFields {
 }
 
 const Layout = ({ layoutData, headLinks }: LayoutProps): JSX.Element => {
-  const { route } = layoutData.sitecore;
+  const { route,context }: any = layoutData.sitecore;
 
   const fields = route?.fields as RouteFields;
-
+ const BGColor =context?.multisiteSettings?.BgColor?.value
   return (
     <>
       <Scripts />
@@ -37,7 +37,7 @@ const Layout = ({ layoutData, headLinks }: LayoutProps): JSX.Element => {
 
       <Navigation />
       {/* root placeholder for the app, which we add components to using route data */}
-      <div className="container">
+      <div className="container" style="background-color="{BGColor} >
         {route && (
           <Placeholder
             name="jss-main"
