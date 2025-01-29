@@ -1,4 +1,4 @@
-# Sitecore JSS Next.js Sample Application
+# Sitecore JSS MULTISITE Next.js Sample Application
 
 <!---
 @TODO: Update to next version docs before release
