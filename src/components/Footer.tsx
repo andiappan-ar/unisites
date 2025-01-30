@@ -12,7 +12,6 @@ const FooterComponent = () => {
         <p>&copy; {new Date().getFullYear()} {company}</p>
         <p>&copy; {domain}</p>
         <ul>
-          <li><a href="#">About Us</a></li>
           <li><a href="#">Contact</a></li>
           <li><a href="#">Privacy Policy</a></li>
         </ul>
