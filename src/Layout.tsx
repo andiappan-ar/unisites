@@ -20,7 +20,7 @@ interface RouteFields {
 }
  
 const Layout = ({ layoutData, headLinks }: LayoutProps): JSX.Element => {
-  const { route,context }:any = layoutData.sitecore;
+  const { route }:any = layoutData.sitecore;
  
   const fields = route?.fields as RouteFields;
   // const BGColor : any  =context?.multisiteSettings?.BgColor?.value
