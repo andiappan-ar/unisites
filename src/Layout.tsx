@@ -23,7 +23,7 @@ const Layout = ({ layoutData, headLinks }: LayoutProps): JSX.Element => {
   const { route,context }:any = layoutData.sitecore;
  
   const fields = route?.fields as RouteFields;
-  const BGColor : any  =context?.multisiteSettings?.BgColor?.value
+  // const BGColor : any  =context?.multisiteSettings?.BgColor?.value
  
   return (
     <>
@@ -38,7 +38,8 @@ const Layout = ({ layoutData, headLinks }: LayoutProps): JSX.Element => {
  
       <Navigation />
       {/* root placeholder for the app, which we add components to using route data */}
-      <div className="container" style={{ backgroundColor: BGColor }}>        
+          <div className="container" >     
+
         {route && <Placeholder name="headless-main" rendering={route} />}</div>
     </>
   );
