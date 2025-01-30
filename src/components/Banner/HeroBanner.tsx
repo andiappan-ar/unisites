@@ -1,4 +1,4 @@
-import { Text, RichText, Field,ImageField, withDatasourceCheck, RichTextField } from '@sitecore-jss/sitecore-jss-nextjs';
+import {  RichText, Field,ImageField, withDatasourceCheck, RichTextField } from '@sitecore-jss/sitecore-jss-nextjs';
 import { ComponentProps } from 'lib/component-props';
 import styles from './HeroBanner.module.css'; // Optional: for styling
 
