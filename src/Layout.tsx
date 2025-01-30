@@ -20,9 +20,9 @@ interface RouteFields {
 }
 
 const Layout = ({ layoutData, headLinks }: LayoutProps): JSX.Element => {
-  const { route } = layoutData.sitecore;
-
+  const { route, context }: any = layoutData.sitecore;
   const fields = route?.fields as RouteFields;
+  const BGColor = context?.multisiteSettings?.BgColor?.value;
 
   return (
     <>
@@ -37,9 +37,9 @@ const Layout = ({ layoutData, headLinks }: LayoutProps): JSX.Element => {
 
       <Navigation />
       {/* root placeholder for the app, which we add components to using route data */}
-      <div className="container">{route && <Placeholder name="jss-main" rendering={route} />}</div>
+      <div className="container" style={{ backgroundColor: BGColor }}>
+        {route && <Placeholder name="headless-main" rendering={route} />}</div>
     </>
   );
 };
-
 export default Layout;
